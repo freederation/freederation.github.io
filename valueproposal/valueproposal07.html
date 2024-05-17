@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html lang="es" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>NFTs con Utilidad</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../intro.html"><strong aria-hidden="true">1.</strong> Qué es FREEDERATION?</a></li><li class="chapter-item expanded "><a href="../motivation/motivation.html"><strong aria-hidden="true">2.</strong> Motivación</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../motivation/motivation01.html"><strong aria-hidden="true">2.1.</strong> Desafíos del Marketing Digital</a></li><li class="chapter-item expanded "><a href="../motivation/motivation02.html"><strong aria-hidden="true">2.2.</strong> Sostenibilidad de la Infraestructura Web3</a></li><li class="chapter-item expanded "><a href="../motivation/motivation03.html"><strong aria-hidden="true">2.3.</strong> Incentivos para apoyar el Open Source</a></li><li class="chapter-item expanded "><a href="../motivation/motivation04.html"><strong aria-hidden="true">2.4.</strong> Retos en la Moderación de Contenidos</a></li></ol></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal.html"><strong aria-hidden="true">3.</strong> Propuesta de Valor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../valueproposal/valueproposal01.html"><strong aria-hidden="true">3.1.</strong> Reputación como Valor Intrínseco</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal02.html"><strong aria-hidden="true">3.2.</strong> Organización de la Franquicia</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal03.html"><strong aria-hidden="true">3.3.</strong> Curación de Contenido y Marketing Responsable</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal04.html"><strong aria-hidden="true">3.4.</strong> Valor Agregado para los Sponsors</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal05.html"><strong aria-hidden="true">3.5.</strong> Fuentes de Recaudo</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal06.html"><strong aria-hidden="true">3.6.</strong> Respaldo de Compromisos</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal07.html" class="active"><strong aria-hidden="true">3.7.</strong> NFTs con Utilidad</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="nfts-con-utilidad"><a class="header" href="#nfts-con-utilidad">NFTs con Utilidad</a></h2>
+<p><strong>FREEDERATION</strong> brinda herramientas para que las <strong>Regen-Stars</strong> licencien colecciones de NFTs, estableciendo parámetros para su acuñamiento y emisión aleatoria, lo que brinda a los coleccionistas una experiencia única y emocionante.</p>
+<p>Los pioneros en esta nueva frontera de la propiedad digital serán los Patrocinadores (<strong>Sponsors</strong>), quienes utilizan el proceso de <strong>SponsorShot</strong> para acuñar los NFTs exclusivos. Con esta funcionalidad se fomenta la participación de la comunidad de usuarios en la red social Nostr para contribuir al proyecto Open Source.</p>
+<p>Las colecciones licenciadas en <strong>FREEDERATION</strong> se conocen como <strong>Sustain-Collections</strong>, y sus NFTs como <strong>Combi-Tokens</strong>. Estos activos digitales no solo son objetos de colección, sino que también tienen una utilidad práctica dentro de la red social Nostr, donde los portadores pueden destacar sus interacciones y publicaciones.</p>
+<p>Cada NFT de una <strong>Sustain-Collection</strong> puede proporcionar a su portador derechos a servicios específicos ofrecidos por la comunidad, acceso a eventos promocionales y perks diseñados para incentivar la colaboración con el proyecto Open Source de <strong>Regen-Star</strong>. Esta estructura no solo fortalece la comunidad, sino que también asegura que cada miembro pueda beneficiarse directamente de su participación activa.</p>
+<p>Una característica innovadora de <strong>FREEDERATION</strong> es la capacidad de crear <strong>CombiSets</strong>, agrupaciones de <strong>Combi-Tokens</strong> que pueden combinarse para producir NFTs exclusivos. Al completar los <strong>CombiSets</strong>, los coleccionistas pueden acceder a premios especiales dentro de la comunidad de la <strong>Regen-Star</strong>, lo que aumenta su atractivo y valor.</p>
+<p>Además de su uso en redes sociales y comunidades, los <strong>Combi-Tokens</strong> también pueden ser utilizados en juegos NFTs incubados por las <strong>Regen-Stars</strong>. Estos tokens no solo otorgan habilidades y ventajas a los jugadores, sino que también pueden combinarse en <strong>CombiSets</strong> para crear NFTs exclusivos con poderes especiales. Esta integración de los NFTs en el mundo de los juegos amplía aún más las posibilidades de participación y diversión para los usuarios.</p>
+<p>La distribución aleatoria de piezas entre los coleccionistas, junto con la posibilidad de establecer acuerdos de asociación para la gestión compartida de premios, crea un entorno dinámico y colaborativo en el que los usuarios pueden comerciar, intercambiar y utilizar sus tokens de formas innovadoras y valiosas.</p>
+<p>En resumen, <strong>FREEDERATION</strong> representa un paso audaz hacia la creación de economías digitales sostenibles dentro del metaverso. Al fomentar la participación comunitaria y la colaboración entre los usuarios, esta plataforma está transformando la forma en que interactuamos con los activos digitales, abriendo nuevas fronteras de valor y creatividad en el mundo de los NFTs.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../valueproposal/valueproposal06.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../valueproposal/valueproposal06.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

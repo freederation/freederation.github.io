@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html lang="es" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Retos en la Moderación de Contenidos</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../intro.html"><strong aria-hidden="true">1.</strong> Qué es FREEDERATION?</a></li><li class="chapter-item expanded "><a href="../motivation/motivation.html"><strong aria-hidden="true">2.</strong> Motivación</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../motivation/motivation01.html"><strong aria-hidden="true">2.1.</strong> Desafíos del Marketing Digital</a></li><li class="chapter-item expanded "><a href="../motivation/motivation02.html"><strong aria-hidden="true">2.2.</strong> Sostenibilidad de la Infraestructura Web3</a></li><li class="chapter-item expanded "><a href="../motivation/motivation03.html"><strong aria-hidden="true">2.3.</strong> Incentivos para apoyar el Open Source</a></li><li class="chapter-item expanded "><a href="../motivation/motivation04.html" class="active"><strong aria-hidden="true">2.4.</strong> Retos en la Moderación de Contenidos</a></li></ol></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal.html"><strong aria-hidden="true">3.</strong> Propuesta de Valor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../valueproposal/valueproposal01.html"><strong aria-hidden="true">3.1.</strong> Reputación como Valor Intrínseco</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal02.html"><strong aria-hidden="true">3.2.</strong> Organización de la Franquicia</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal03.html"><strong aria-hidden="true">3.3.</strong> Curación de Contenido y Marketing Responsable</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal04.html"><strong aria-hidden="true">3.4.</strong> Valor Agregado para los Sponsors</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal05.html"><strong aria-hidden="true">3.5.</strong> Fuentes de Recaudo</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal06.html"><strong aria-hidden="true">3.6.</strong> Respaldo de Compromisos</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal07.html"><strong aria-hidden="true">3.7.</strong> NFTs con Utilidad</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="retos-en-la-moderación-de-contenidos"><a class="header" href="#retos-en-la-moderación-de-contenidos">Retos en la Moderación de Contenidos</a></h2>
+<p>En un mundo digital cada vez más descentralizado, la necesidad de sistemas que fomenten la confianza y la responsabilidad se vuelve primordial. Es en este contexto que surge la propuesta de un <strong>Sistema de Reputación</strong> para la Web Descentralizada, una iniciativa que busca desarrollar mecanismos de economía digital basados en el <strong>Marketing Responsable</strong>.</p>
+<p>El enfoque propuesto deberá erradicar las prácticas nocivas de las actuales plataformas de marketing digital en la web2, las cuales consisten en fomentar la publicidad intrusiva y vulnerar la privacidad de los usuarios con la recolección de forzosa de datos personales.</p>
+<h3 id="un-sistema-de-reputación-para-nostr"><a class="header" href="#un-sistema-de-reputación-para-nostr">Un Sistema de Reputación para Nostr</a></h3>
+<p><a href="https://franciscolen.substack.com/p/nostr-la-red-social-descentralizada"><strong>Nostr</strong></a> es un protocolo de comunicaciones diseñado específicamente para redes sociales descentralizadas. Ofrece una arquitectura orientada a eventos que facilita la interoperabilidad y el procesamiento de mensajes a través de nodos llamados "Relays". Los usuarios interactúan mediante mensajes JSON firmados criptográficamente, lo que garantiza la autenticidad de las comunicaciones.</p>
+<p>La elección de Nostr como plataforma para este Sistema de Reputación se fundamenta en su simplicidad y en su enfoque centrado en el usuario. Las características de Nostr son particularmente atractivas para los defensores de la privacidad y la descentralización, ya que permiten a los usuarios ser verdaderos dueños de su información.</p>
+<p>No obstante, Nostr enfrenta un problema con la presencia de cuentas maliciosas que desorientan a los usuarios al asignar referencias erróneas de contenido no pertinente, lo que conlleva prácticas fraudulentas, publicidad engañosa y promoción no deseada. Tales prácticas constituyen una forma de spam que afecta negativamente la experiencia de los usuarios y los expone a riesgos informáticos.</p>
+<h3 id="el-problema-con-los-zaps"><a class="header" href="#el-problema-con-los-zaps">El Problema con los Zaps</a></h3>
+<p>Actualmente, Nostr cuenta con un mecanismo para gestionar la promoción de contenidos mediante la métrica de la cantidad de donativos que reciben las cuentas populares. Conocidas como <a href="https://franciscolen.substack.com/p/monetizacion-y-mercadeo-digital-en">Zaps</a>, se denomina a las operaciones relacionadas con la gestión de microdonaciones realizadas a través de la Lighting Network, tal y como se especifica en la <a href="https://github.com/nostr-protocol/nips/blob/master/57.md">Propuesta de Mejora (NIP) 57</a>.</p>
+<p>El inconveniente con determinar la relevancia de los contenidos de acuerdo a la cantidad de Zaps que reciben sus autores, es que los agentes maliciosos pueden incrementar artificialmente la reputación de sus cuentas mediante la auto-donación y la creación de esquemas de confabulación entre cuentas falsas. Tales prácticas manipulan los sistemas de clasificación y recomendación, fomentando la proliferación de contenido malicioso en la red.</p>
+<h3 id="el-aseguramiento-de-la-calidad-como-sustento-de-la-reputación"><a class="header" href="#el-aseguramiento-de-la-calidad-como-sustento-de-la-reputación">El Aseguramiento de la Calidad como Sustento de la Reputación</a></h3>
+<p>Las comunidades en la red social Nostr necesitan un modelo organizacional que gestione la calidad de la información y genere ingresos para apoyar el desarrollo de Software Libre, crucial para la infraestructura de la web descentralizada.</p>
+<p>La clave está en desarrollar mecanismos para que los usuarios identifiquen y valoren la autenticidad y calidad del contenido sin sacrificar su privacidad ni ser víctimas de prácticas intrusivas. Este modelo debe incluir mecanismos de arbitraje para la moderación de contenidos, basados en un sistema de reputación.</p>
+<p>Por las razones expuestas, resulta crucial la integración de Proyectos de Open Source como garantes de la reputación. Al establecer organizaciones de responsabilidad colectiva, se logra estructurar un modelo de negocio sostenible alrededor de los servicios de aseguramiento de la calidad y la integridad de la información en redes sociales descentralizadas.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../motivation/motivation03.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../valueproposal/valueproposal.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../motivation/motivation03.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../valueproposal/valueproposal.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
