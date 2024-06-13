@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html lang="es" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Aspectos a Mejorar: Votación y Privacidad</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../intro.html"><strong aria-hidden="true">1.</strong> Qué es FREEDERATION?</a></li><li class="chapter-item expanded "><a href="../motivation/motivation.html"><strong aria-hidden="true">2.</strong> Motivación</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../motivation/motivation01.html"><strong aria-hidden="true">2.1.</strong> Desafíos del Marketing Digital</a></li><li class="chapter-item expanded "><a href="../motivation/motivation02.html"><strong aria-hidden="true">2.2.</strong> Sostenibilidad de la Infraestructura Web3</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../motivation/motivation021.html"><strong aria-hidden="true">2.2.1.</strong> Ciberseguridad y Descargo de Responsabilidades del Open Source</a></li><li class="chapter-item expanded "><a href="../motivation/motivation022.html"><strong aria-hidden="true">2.2.2.</strong> Colaboración y Mercado de Seguros Cibernéticos</a></li></ol></li><li class="chapter-item expanded "><a href="../motivation/motivation03.html"><strong aria-hidden="true">2.3.</strong> Incentivos para apoyar el Open Source</a></li><li class="chapter-item expanded "><a href="../motivation/motivation04.html"><strong aria-hidden="true">2.4.</strong> Retos en la Moderación de Contenidos</a></li></ol></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal.html"><strong aria-hidden="true">3.</strong> Propuesta de Valor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../valueproposal/valueproposal01.html"><strong aria-hidden="true">3.1.</strong> Reputación como Valor Intrínseco</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal02.html"><strong aria-hidden="true">3.2.</strong> Organización de la Franquicia</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal03.html"><strong aria-hidden="true">3.3.</strong> Curación de Contenido y Marketing Responsable</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal04.html"><strong aria-hidden="true">3.4.</strong> Valor Agregado para los Sponsors</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal05.html"><strong aria-hidden="true">3.5.</strong> Fuentes de Recaudo</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal06.html"><strong aria-hidden="true">3.6.</strong> Respaldo de Compromisos</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal07.html"><strong aria-hidden="true">3.7.</strong> NFTs con Utilidad</a></li></ol></li><li class="chapter-item expanded "><a href="../futuredev/futuredev.html"><strong aria-hidden="true">4.</strong> Desarrollo a Futuro</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../futuredev/futuredev01.html"><strong aria-hidden="true">4.1.</strong> Desafíos y Soluciones</a></li><li class="chapter-item expanded "><a href="../futuredev/futuredev02.html"><strong aria-hidden="true">4.2.</strong> Futuras Aplicaciones</a></li><li class="chapter-item expanded "><a href="../futuredev/futuredev03.html"><strong aria-hidden="true">4.3.</strong> Hoja de Ruta (ROADMAP)</a></li></ol></li><li class="chapter-item expanded "><a href="../architect/architect.html"><strong aria-hidden="true">5.</strong> Arquitectura</a></li><li class="chapter-item expanded "><a href="../franchise/franchise.html"><strong aria-hidden="true">6.</strong> Franquicia de Responsabilidad Mutua</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../franchise/regen_star.html"><strong aria-hidden="true">6.1.</strong> Regen-Star</a></li><li class="chapter-item expanded "><a href="../franchise/meta_island.html"><strong aria-hidden="true">6.2.</strong> Meta-Islands</a></li><li class="chapter-item expanded "><a href="../franchise/regen_planet.html"><strong aria-hidden="true">6.3.</strong> Regen-Planet</a></li></ol></li><li class="chapter-item expanded "><a href="../economy/economy.html"><strong aria-hidden="true">7.</strong> Economía</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../economy/economy01.html"><strong aria-hidden="true">7.1.</strong> Recaudo de Fondos en la Regen-Star</a></li><li class="chapter-item expanded "><a href="../economy/economy02.html"><strong aria-hidden="true">7.2.</strong> Manejo Presupuestal de Bienes Públicos</a></li><li class="chapter-item expanded "><a href="../economy/economy03.html" class="active"><strong aria-hidden="true">7.3.</strong> SponsorShots: Patrocinio y Catalogación</a></li><li class="chapter-item expanded "><a href="../economy/economy04.html"><strong aria-hidden="true">7.4.</strong> Fondo de Gobernanza de FREEDERATION</a></li><li class="chapter-item expanded "><a href="../economy/economy05.html"><strong aria-hidden="true">7.5.</strong> VestingPeriods y Retención de Comisiones</a></li></ol></li><li class="chapter-item expanded "><a href="../governance/governance.html"><strong aria-hidden="true">8.</strong> Governanza</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../governance/governance01.html"><strong aria-hidden="true">8.1.</strong> Tribunales de Arbitraje</a></li><li class="chapter-item expanded "><a href="../economy/economy02.html"><strong aria-hidden="true">8.2.</strong> Manejo Presupuestal de Bienes Públicos</a></li><li class="chapter-item expanded "><a href="../economy/economy03.html" class="active"><strong aria-hidden="true">8.3.</strong> Aspectos a Mejorar: Votación y Privacidad</a></li></ol></li><li class="chapter-item expanded "><a href="../nftplatform/nftplatform.html"><strong aria-hidden="true">9.</strong> Tokens de Participación Comunitaria</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../nftplatform/listingtokens.html"><strong aria-hidden="true">9.1.</strong> Listing-Tokens y SponsorAccounts</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens01.html"><strong aria-hidden="true">9.2.</strong> Combi-Tokens y Sustain-Collections</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens02.html"><strong aria-hidden="true">9.3.</strong> Licenciamiento de las Sustain-Collection</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens03.html"><strong aria-hidden="true">9.4.</strong> Recompensas por Sustain-Badge</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens04.html"><strong aria-hidden="true">9.5.</strong> Gobernanza basada en CombiSets</a></li><li class="chapter-item expanded "><a href="../fortunarings/fortunarings.html"><strong aria-hidden="true">9.6.</strong> Anillos de la Fortuna</a></li></ol></li><li class="chapter-item expanded "><a href="../glossary/glossary_tokens.html"><strong aria-hidden="true">10.</strong> Glosario de Tokens</a></li><li class="chapter-item expanded "><a href="../glossary/glossary_terms.html"><strong aria-hidden="true">11.</strong> Glosario de Términos</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="sponsorshots-patrocinio-y-catalogación"><a class="header" href="#sponsorshots-patrocinio-y-catalogación">SponsorShots: Patrocinio y Catalogación</a></h1>
+<p>El proceso del <strong>SponsorShot</strong> establece el recaudo financiero que las <strong>Regen-Star</strong> requieren para gestionar el desarrollo y mantenimiento de los proyectos Open Source. Las Meta-Islas asociadas a un Regen-Star ayudan a la distribución de los tokens del <strong>SponsorPack</strong> (<strong>Combi-Tokens</strong> y <strong>Listing-Tokens</strong>), y gestionan el proceso de promoción de contenidos con sus patrocinadores (Sponsors).</p>
+<p>Los <strong>SponsorShots</strong> son la alternativa de los <a href="https://nostr.how/es/zaps"><strong>Zaps de Nostr</strong></a>, con el beneficio adicional de que contribuyen a la sostenibilidad de Bienes Públicos y Open Source. De forma similar al fenómeno del <a href="https://franciscolen.substack.com/p/monetizacion-y-mercadeo-digital-en"><strong>Zapvertising</strong></a> en Nostr, los patrocinadores aportarán una contribución económica a las Meta-Islas que ofrecen contenido de calidad y demuestran un interés genuino de su audiencia.</p>
+<h2 id="recaudo-y-prevención-del-fraude"><a class="header" href="#recaudo-y-prevención-del-fraude">Recaudo y Prevención del Fraude</a></h2>
+<p>El aspecto clave es que a partir del recaudo de cada SponsorShot, una parte se destina al <a href="economy01.html"><strong>Fondo Común</strong></a> de la <strong>Regen-Star</strong>. Otro porcentaje se destina a <strong>Fondo de Gobernanza de FREEDERATION</strong>. Y del monto restante se deduce una comisión. Esta comisión se reparte de la siguiente manera:</p>
+<ul>
+<li>Un porcentaje de la comisión se retribuye al Regen-Planet supervisor de la Meta-Isla, según el parámetro de tarifa de recaudo establecido por la gobernanza del Regen-Planet. Usualmente es el 10%.</li>
+<li>El resto de la comisión corresponde al dueño de la Meta-Isla (90%).</li>
+</ul>
+<hr />
+<p><img src="../img/sponsorshot_interaction2.jpg" alt="sponsorshot_interaction_income" /></p>
+<hr />
+<p>Este sistema de reparto de los SponsorShots brinda mecanismos para prevenir el fraude prevalente en el previo sistema de los Zaps en Nostr: se corrige el <a href="../motivation/motivation04.html"><strong>problema de las auto-donaciones</strong></a> que manipulan los puntajes de relevancia  y fomentan esquemas de confabulación entre cuentas.</p>
+<p>La filosofía de la prevención del fraude de la auto-promoción consiste en impedir que el atacante recupere los fondos invertidos en <a href="../motivation/motivation04.html"><strong>Zaps fraudulentos</strong></a>. Por ende, los fondos de promoción recaudados con los SponsorShots deben destinar una contribución al beneficio de un proyecto de Bienes Públicos, el cuál ha sido avalado por la comunidad y autorizado por la DAO de FREEDERATION.</p>
+<p>Gracias al mecanismo de los SponsorShots.  se garantiza una contribución recurrente al proyecto de Bienes Públicos y Open Source. Al mismo tiempo se constituye como una medida de prevención de fraude.</p>
+<h2 id="reputación-de-la-meta-isla-y-sponsorshots"><a class="header" href="#reputación-de-la-meta-isla-y-sponsorshots">Reputación de la Meta-Isla y SponsorShots</a></h2>
+<p>La contribución de los SponsorShots aumenta el valor social de la actividad de la Meta-Isla. Precisamente, porque respalda el mérito de contribuir con un genuino proyecto que beneficia a la sociedad, y se refleja directamente en su puntaje de Reputación.</p>
+<p>Esa relación entre la Reputación de la Meta-Isla, la legitimidad del proyecto de Bienes Públicos liderado por la Regen-Star, y el compromiso con la calidad de contenidos otorgan un valor especial
+al inversor o patrocinador.</p>
+<h2 id="interacción-en-los-sponsorshots"><a class="header" href="#interacción-en-los-sponsorshots">Interacción en los SponsorShots</a></h2>
+<p>A cambio de su contribución económica en el SponsorShot, el inversor obtiene un reconocimiento único, el <strong>SponsorPack</strong>: Un paquete de NFTs que adquiere importancia en futuras actividades comunitarias dentro de las Meta-Islas.</p>
+<hr />
+<p><img src="../img/sponsorshot_interaction1.jpg" alt="sponsorshot_interaction" /></p>
+<hr />
+<p>Cabe destacar que a través de la operación del SponsorShot se establece un mecanismo de comunicación privado donde el patrocinador propone publicaciones para ser promovidas y catalogadas por la Meta-Isla.</p>
+<p>La Meta-Isla que recibe un SponsorShot, tiene la potestad de elegir si aceptar el encargo del patrocinador o simplemente otorgar el paquete de NFTs (<strong>SponsorPack</strong>), según la siguiente casuística:</p>
+<ul>
+<li>
+<p><code>A</code>.  Si acepta, se gana una comisión del ingreso del SponsorShot.</p>
+<ul>
+<li><code>A.1</code>. Prepara una publicación en borrador y la presenta al patrocinador para confirmar el encargo.</li>
+<li><code>A.2</code>. El patrocinador firma digitalmente la aceptación del encargo, autorizando el pago de la comisión extra incluída en el SponsorShot para la Meta-Isla.</li>
+</ul>
+</li>
+<li>
+<p><code>B</code>.  Si NO acepta el encargo, la comisión del SponsorShot se destina enteramente al fondo común del Regen-Planet.</p>
+</li>
+<li>
+<p><code>C</code>. Los SponsorShots sin encargo simplemente otorgan un paquete de NFTs (SponsorPack) y entregan una contribución opcional a la Meta-Isla.</p>
+</li>
+</ul>
+<p>En todos los casos (<code>A</code>, <code>B</code>, <code>C</code>) El patrocinador recibe el SponsorPack que consiste en un grupo de NFTs promocionales (<strong>Combi-Tokens</strong>), mas un número fijo de <strong>Listing-Tokens</strong> (5 por defecto).</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../economy/economy02.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../economy/economy04.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../economy/economy02.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../economy/economy04.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

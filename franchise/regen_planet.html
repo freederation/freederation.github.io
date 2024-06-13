@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html lang="es" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Regen-Planet</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../intro.html"><strong aria-hidden="true">1.</strong> Qué es FREEDERATION?</a></li><li class="chapter-item expanded "><a href="../motivation/motivation.html"><strong aria-hidden="true">2.</strong> Motivación</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../motivation/motivation01.html"><strong aria-hidden="true">2.1.</strong> Desafíos del Marketing Digital</a></li><li class="chapter-item expanded "><a href="../motivation/motivation02.html"><strong aria-hidden="true">2.2.</strong> Sostenibilidad de la Infraestructura Web3</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../motivation/motivation021.html"><strong aria-hidden="true">2.2.1.</strong> Ciberseguridad y Descargo de Responsabilidades del Open Source</a></li><li class="chapter-item expanded "><a href="../motivation/motivation022.html"><strong aria-hidden="true">2.2.2.</strong> Colaboración y Mercado de Seguros Cibernéticos</a></li></ol></li><li class="chapter-item expanded "><a href="../motivation/motivation03.html"><strong aria-hidden="true">2.3.</strong> Incentivos para apoyar el Open Source</a></li><li class="chapter-item expanded "><a href="../motivation/motivation04.html"><strong aria-hidden="true">2.4.</strong> Retos en la Moderación de Contenidos</a></li></ol></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal.html"><strong aria-hidden="true">3.</strong> Propuesta de Valor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../valueproposal/valueproposal01.html"><strong aria-hidden="true">3.1.</strong> Reputación como Valor Intrínseco</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal02.html"><strong aria-hidden="true">3.2.</strong> Organización de la Franquicia</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal03.html"><strong aria-hidden="true">3.3.</strong> Curación de Contenido y Marketing Responsable</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal04.html"><strong aria-hidden="true">3.4.</strong> Valor Agregado para los Sponsors</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal05.html"><strong aria-hidden="true">3.5.</strong> Fuentes de Recaudo</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal06.html"><strong aria-hidden="true">3.6.</strong> Respaldo de Compromisos</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal07.html"><strong aria-hidden="true">3.7.</strong> NFTs con Utilidad</a></li></ol></li><li class="chapter-item expanded "><a href="../futuredev/futuredev.html"><strong aria-hidden="true">4.</strong> Desarrollo a Futuro</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../futuredev/futuredev01.html"><strong aria-hidden="true">4.1.</strong> Desafíos y Soluciones</a></li><li class="chapter-item expanded "><a href="../futuredev/futuredev02.html"><strong aria-hidden="true">4.2.</strong> Futuras Aplicaciones</a></li><li class="chapter-item expanded "><a href="../futuredev/futuredev03.html"><strong aria-hidden="true">4.3.</strong> Hoja de Ruta (ROADMAP)</a></li></ol></li><li class="chapter-item expanded "><a href="../architect/architect.html"><strong aria-hidden="true">5.</strong> Arquitectura</a></li><li class="chapter-item expanded "><a href="../franchise/franchise.html"><strong aria-hidden="true">6.</strong> Franquicia de Responsabilidad Mutua</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../franchise/regen_star.html"><strong aria-hidden="true">6.1.</strong> Regen-Star</a></li><li class="chapter-item expanded "><a href="../franchise/meta_island.html"><strong aria-hidden="true">6.2.</strong> Meta-Islands</a></li><li class="chapter-item expanded "><a href="../franchise/regen_planet.html" class="active"><strong aria-hidden="true">6.3.</strong> Regen-Planet</a></li></ol></li><li class="chapter-item expanded "><a href="../economy/economy.html"><strong aria-hidden="true">7.</strong> Economía</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../economy/economy01.html"><strong aria-hidden="true">7.1.</strong> Recaudo de Fondos en la Regen-Star</a></li><li class="chapter-item expanded "><a href="../economy/economy02.html"><strong aria-hidden="true">7.2.</strong> Manejo Presupuestal de Bienes Públicos</a></li><li class="chapter-item expanded "><a href="../economy/economy03.html"><strong aria-hidden="true">7.3.</strong> SponsorShots: Patrocinio y Catalogación</a></li><li class="chapter-item expanded "><a href="../economy/economy04.html"><strong aria-hidden="true">7.4.</strong> Fondo de Gobernanza de FREEDERATION</a></li><li class="chapter-item expanded "><a href="../economy/economy05.html"><strong aria-hidden="true">7.5.</strong> VestingPeriods y Retención de Comisiones</a></li></ol></li><li class="chapter-item expanded "><a href="../governance/governance.html"><strong aria-hidden="true">8.</strong> Governanza</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../governance/governance01.html"><strong aria-hidden="true">8.1.</strong> Tribunales de Arbitraje</a></li><li class="chapter-item expanded "><a href="../economy/economy02.html"><strong aria-hidden="true">8.2.</strong> Manejo Presupuestal de Bienes Públicos</a></li><li class="chapter-item expanded "><a href="../economy/economy03.html"><strong aria-hidden="true">8.3.</strong> Aspectos a Mejorar: Votación y Privacidad</a></li></ol></li><li class="chapter-item expanded "><a href="../nftplatform/nftplatform.html"><strong aria-hidden="true">9.</strong> Tokens de Participación Comunitaria</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../nftplatform/listingtokens.html"><strong aria-hidden="true">9.1.</strong> Listing-Tokens y SponsorAccounts</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens01.html"><strong aria-hidden="true">9.2.</strong> Combi-Tokens y Sustain-Collections</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens02.html"><strong aria-hidden="true">9.3.</strong> Licenciamiento de las Sustain-Collection</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens03.html"><strong aria-hidden="true">9.4.</strong> Recompensas por Sustain-Badge</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens04.html"><strong aria-hidden="true">9.5.</strong> Gobernanza basada en CombiSets</a></li><li class="chapter-item expanded "><a href="../fortunarings/fortunarings.html"><strong aria-hidden="true">9.6.</strong> Anillos de la Fortuna</a></li></ol></li><li class="chapter-item expanded "><a href="../glossary/glossary_tokens.html"><strong aria-hidden="true">10.</strong> Glosario de Tokens</a></li><li class="chapter-item expanded "><a href="../glossary/glossary_terms.html"><strong aria-hidden="true">11.</strong> Glosario de Términos</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="regen-planets"><a class="header" href="#regen-planets">Regen-Planets</a></h1>
+<p>En cada franquicia Regen-Star, los Regen-Planets se erigen como los pilares fundamentales que facilitan la expansión y el crecimiento de la red. Estos actúan como agentes de afiliación, ofreciendo a los aspirantes la oportunidad de unirse a la franquicia y establecer sus propias Meta-Islas.</p>
+<hr />
+<p><img src="../img/meta_island_purchasing_chart.jpg" alt="Regen-Planet Income" /></p>
+<hr />
+<h3 id="supervisión-y-control-de-las-meta-islas"><a class="header" href="#supervisión-y-control-de-las-meta-islas">Supervisión y Control de las Meta-Islas</a></h3>
+<p>Los Regen-Planets tienen la responsabilidad de supervisar las actividades de las Meta-Islas bajo su jurisdicción. Esta supervisión es esencial para garantizar el cumplimiento de las normativas establecidas por la franquicia Regen-Star. En caso de incumplimiento, los Regen-Planets tienen la autoridad para tomar medidas disciplinarias que incluyen:</p>
+<ul>
+<li><strong>Bloqueo de Operaciones:</strong> Suspensión temporal de las actividades de una Meta-Isla.</li>
+<li><strong>Revocación de Membresía:</strong> Cancelación unilateral de la membresía del propietario de la Meta-Isla y retiro del token que acredita la titularidad de la Meta-Isla.</li>
+</ul>
+<p>Estas medidas aseguran que las operaciones dentro de las Meta-Islas se mantengan dentro de los estándares requeridos, protegiendo la integridad de la franquicia Regen-Star.</p>
+<h3 id="incentivos-para-la-supervisión"><a class="header" href="#incentivos-para-la-supervisión">Incentivos para la Supervisión</a></h3>
+<p>Los Regen-Planets están motivados a ejercer una supervisión diligente sobre las Meta-Islas debido a los beneficios económicos derivados de su correcto funcionamiento. Los Regen-Planets comparten las comisiones de ventas generadas por las Meta-Islas a su cargo, creando una fuente de ingresos constante y significativa. Esta estructura de incentivos asegura que los Regen-Planets se mantengan proactivos en la vigilancia y apoyo de sus Meta-Islas.</p>
+<h2 id="creación-y-venta-de-meta-islas"><a class="header" href="#creación-y-venta-de-meta-islas">Creación y Venta de Meta-Islas</a></h2>
+<p>Cuando una Meta-Isla es vendida a un aspirante a miembro de la franquicia, el Regen-Planet recibe una comisión de venta. Y el restante de los ingresos se destina al sostenimiento de la Regen-Star cuya cotización se establece por el Precio-Base, el cuál se obtiene de la curva de precios de emisión de Meta-Islas. Este sistema de comisiones asegura que tanto los Regen-Planets como la Regen-Star obtengan beneficios de cada transacción, promoviendo un modelo de negocio sostenible.</p>
+<h3 id="cálculo-del-precio-de-la-meta-isla"><a class="header" href="#cálculo-del-precio-de-la-meta-isla">Cálculo del Precio de la Meta-Isla</a></h3>
+<p>El precio de una Meta-Isla se determina mediante una fórmula que considera tanto el Precio-Base como la Comisión destinada al Regen-Planet. El Precio-Base se calcula utilizando una fórmula de curva de exponente cúbico, ajustada de acuerdo a la cantidad de Meta-Islas ya emitidas dentro del Regen-Planet. Los parámetros de esta fórmula son establecidos por la Regen-Star, y se definen como sigue:</p>
+<ul>
+<li><strong>FloorPrice:</strong> Precio mínimo base.</li>
+<li><strong>IslandCurvePriceRate:</strong> Factor de incremento de curva.</li>
+<li><strong>CurveFactor:</strong> Definido como el número de islas emitidas dividido por el prestigio del Regen-Planet.</li>
+</ul>
+<p>La fórmula para el Precio Base es:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">PrecioBase</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord">FloorPrice</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:3em;vertical-align:-1.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">(</span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">IslandCurvePriceRate</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="minner"><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Prestigio</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">NumeroIslas</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.654em;"><span style="top:-3.9029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size4">)</span></span></span></span></span></span></span></p>
+<p>El incremento dinámico del Precio Base está diseñado para limitar la emisión de nuevas Meta-Islas, creando un efecto de escasez controlada que fomenta una competencia saludable entre diferentes Regen-Planets. Este mecanismo asegura que el mercado de Meta-Islas se mantenga equilibrado y atractivo para nuevos inversores.</p>
+<p><img src="../img/meta-islands_pricecurve.jpg" alt="Meta-Island Price Curve" /></p>
+<p>Cabe resultar que el parámetro de <strong>Prestigio</strong> utilizado por el Regen-Planet creado no es el mismo parámetro global de su Regen-Star. En su lugar, se asigna un valor de Prestigio instanciado que refleja el estado de la Regen-Star en el momento de la creación del Regen-Planet.</p>
+<p>El objetivo de tal política es garantizar que, a medida que el proyecto adquiere madurez y demuestra su compromiso con la calidad, se le permita incorporar más agentes asociados. Es decir, que los Regen-Planets acuñados en generaciones futuras adquieran una mayor capacidad de producción de Meta-Islas que sus predecesores. Así se mejora su competitividad incentivando un crecimiento orgánico y sostenido de la franquicia.</p>
+<h3 id="recaudación-de-fondos-por-actividad-económica"><a class="header" href="#recaudación-de-fondos-por-actividad-económica">Recaudación de Fondos por Actividad Económica</a></h3>
+<p>Los Regen-Planets también recaudan fondos provenientes de la actividad económica de las Meta-Islas, especialmente en la monetización de servicios y contenidos patrocinados. Mediante el proceso conocido como <strong>SponsorShot</strong>, las Meta-Islas pueden atraer patrocinadores (Sponsors) para financiar sus actividades. Los ingresos generados a través de SponsorShot se distribuyen de la siguiente manera:</p>
+<ul>
+<li>Un porcentaje se destina a proyectos de software de código abierto (Open Source), fomentando así el desarrollo y la innovación tecnológica dentro del ecosistema Regen-Star.</li>
+<li>De la comisión de venta obtenida por la Meta-Isla a través del SponsorShot, un porcentaje se distribuye como regalía al Regen-Planet.</li>
+</ul>
+<h2 id="creación-de-los-regen-planets"><a class="header" href="#creación-de-los-regen-planets">Creación de los Regen-Planets</a></h2>
+<p>Los Regen-Planets son inicialmente adquiridos por los Early-Adopters, los primeros inversores en el proyecto Regen-Star. Estos inversores obtienen sus Regen-Planets a través de una venta inicial de tokens, coordinada por la Regen-Star en su fase de fundación. La cantidad de tokens emitidos es limitada, lo que garantiza exclusividad y valor a estos activos iniciales.</p>
+<p><img src="../img/regen_planet_ido.jpg" alt="Planet Initial Offering" /></p>
+<p>Cuando el fundador de una Regen-Star inscribe su proyecto, también define los parámetros de la venta inicial de Regen-Planets para su venta inicial. Esta información especifica:</p>
+<div class="table-wrapper"><table><thead><tr><th>Atributo</th><th>Descripción</th></tr></thead><tbody>
+<tr><td><strong>FounderPlanetReserve</strong></td><td>Cantidad de Regen-Planets reservadas para el fundador.</td></tr>
+<tr><td><strong>InitialPlanetMintingCount</strong></td><td>Cantidad total de Regen-Planets a ofrecer en la venta incial</td></tr>
+<tr><td><strong>PlanetMintingPrice</strong></td><td>Precio de venta del ofrecimiento inicial de Regen-Planets</td></tr>
+<tr><td><strong>nonce</strong></td><td>Si es diferente de 0, entonces requiere una autorización de firma criptográfica por cada venta de planeta</td></tr>
+</tbody></table>
+</div>
+<p>Solo cuando la Regen-Star es promovida y acreditada, los Regen-Planets adquiridos en la venta incial ya tendrán la facultad de producir Meta-Islas.
+Posteriormente, los propietarios de Meta-Islands pueden adquirir un Regen-Planet al completar un rompecabezas de piezas NFT conocidas como <strong>Anillos de la Fortuna</strong>. Estos Anillos de la Fortuna son Combi-Tokens generados aleatoriamente con combinaciones únicas de color y número de serie.</p>
+<p>Cada grupo consta de cinco anillos que los coleccionistas pueden intercambiar utilizando las herramientas de mercado de FREEDERATION. Aquellos que logran completar una secuencia de anillos de la misma serie reciben como recompensa un nuevo Regen-Planet.</p>
+<h3 id="propiedad-compartida-y-gobernanza"><a class="header" href="#propiedad-compartida-y-gobernanza">Propiedad Compartida y Gobernanza</a></h3>
+<p>Los Regen-Planets pueden contar con un grupo de accionistas que tienen derecho a los beneficios generados por la actividad de sus Meta-Islas, así como a participar en la gobernanza para tomar decisiones sobre su administración.
+Esta modalidad de gestión compartida se habilita mediante la conformación del grupo de los cinco Anillos de la Fortuna de la misma serie.</p>
+<p>Los múltiples dueños de los anillos NFT pueden acordar una sociedad compartida del planeta, recibiendo cada uno un porcentaje de los derechos económicos de acuerdo con la cantidad de anillos que aporte al grupo.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../franchise/meta_island.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../economy/economy.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../franchise/meta_island.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../economy/economy.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

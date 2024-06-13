@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html lang="es" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Tribunales de Arbitraje</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../intro.html"><strong aria-hidden="true">1.</strong> Qué es FREEDERATION?</a></li><li class="chapter-item expanded "><a href="../motivation/motivation.html"><strong aria-hidden="true">2.</strong> Motivación</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../motivation/motivation01.html"><strong aria-hidden="true">2.1.</strong> Desafíos del Marketing Digital</a></li><li class="chapter-item expanded "><a href="../motivation/motivation02.html"><strong aria-hidden="true">2.2.</strong> Sostenibilidad de la Infraestructura Web3</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../motivation/motivation021.html"><strong aria-hidden="true">2.2.1.</strong> Ciberseguridad y Descargo de Responsabilidades del Open Source</a></li><li class="chapter-item expanded "><a href="../motivation/motivation022.html"><strong aria-hidden="true">2.2.2.</strong> Colaboración y Mercado de Seguros Cibernéticos</a></li></ol></li><li class="chapter-item expanded "><a href="../motivation/motivation03.html"><strong aria-hidden="true">2.3.</strong> Incentivos para apoyar el Open Source</a></li><li class="chapter-item expanded "><a href="../motivation/motivation04.html"><strong aria-hidden="true">2.4.</strong> Retos en la Moderación de Contenidos</a></li></ol></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal.html"><strong aria-hidden="true">3.</strong> Propuesta de Valor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../valueproposal/valueproposal01.html"><strong aria-hidden="true">3.1.</strong> Reputación como Valor Intrínseco</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal02.html"><strong aria-hidden="true">3.2.</strong> Organización de la Franquicia</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal03.html"><strong aria-hidden="true">3.3.</strong> Curación de Contenido y Marketing Responsable</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal04.html"><strong aria-hidden="true">3.4.</strong> Valor Agregado para los Sponsors</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal05.html"><strong aria-hidden="true">3.5.</strong> Fuentes de Recaudo</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal06.html"><strong aria-hidden="true">3.6.</strong> Respaldo de Compromisos</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal07.html"><strong aria-hidden="true">3.7.</strong> NFTs con Utilidad</a></li></ol></li><li class="chapter-item expanded "><a href="../futuredev/futuredev.html"><strong aria-hidden="true">4.</strong> Desarrollo a Futuro</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../futuredev/futuredev01.html"><strong aria-hidden="true">4.1.</strong> Desafíos y Soluciones</a></li><li class="chapter-item expanded "><a href="../futuredev/futuredev02.html"><strong aria-hidden="true">4.2.</strong> Futuras Aplicaciones</a></li><li class="chapter-item expanded "><a href="../futuredev/futuredev03.html"><strong aria-hidden="true">4.3.</strong> Hoja de Ruta (ROADMAP)</a></li></ol></li><li class="chapter-item expanded "><a href="../architect/architect.html"><strong aria-hidden="true">5.</strong> Arquitectura</a></li><li class="chapter-item expanded "><a href="../franchise/franchise.html"><strong aria-hidden="true">6.</strong> Franquicia de Responsabilidad Mutua</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../franchise/regen_star.html"><strong aria-hidden="true">6.1.</strong> Regen-Star</a></li><li class="chapter-item expanded "><a href="../franchise/meta_island.html"><strong aria-hidden="true">6.2.</strong> Meta-Islands</a></li><li class="chapter-item expanded "><a href="../franchise/regen_planet.html"><strong aria-hidden="true">6.3.</strong> Regen-Planet</a></li></ol></li><li class="chapter-item expanded "><a href="../economy/economy.html"><strong aria-hidden="true">7.</strong> Economía</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../economy/economy01.html"><strong aria-hidden="true">7.1.</strong> Recaudo de Fondos en la Regen-Star</a></li><li class="chapter-item expanded "><a href="../economy/economy02.html"><strong aria-hidden="true">7.2.</strong> Manejo Presupuestal de Bienes Públicos</a></li><li class="chapter-item expanded "><a href="../economy/economy03.html"><strong aria-hidden="true">7.3.</strong> SponsorShots: Patrocinio y Catalogación</a></li><li class="chapter-item expanded "><a href="../economy/economy04.html"><strong aria-hidden="true">7.4.</strong> Fondo de Gobernanza de FREEDERATION</a></li><li class="chapter-item expanded "><a href="../economy/economy05.html"><strong aria-hidden="true">7.5.</strong> VestingPeriods y Retención de Comisiones</a></li></ol></li><li class="chapter-item expanded "><a href="../governance/governance.html"><strong aria-hidden="true">8.</strong> Governanza</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../governance/governance01.html" class="active"><strong aria-hidden="true">8.1.</strong> Tribunales de Arbitraje</a></li><li class="chapter-item expanded "><a href="../economy/economy02.html"><strong aria-hidden="true">8.2.</strong> Manejo Presupuestal de Bienes Públicos</a></li><li class="chapter-item expanded "><a href="../economy/economy03.html"><strong aria-hidden="true">8.3.</strong> Aspectos a Mejorar: Votación y Privacidad</a></li></ol></li><li class="chapter-item expanded "><a href="../nftplatform/nftplatform.html"><strong aria-hidden="true">9.</strong> Tokens de Participación Comunitaria</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../nftplatform/listingtokens.html"><strong aria-hidden="true">9.1.</strong> Listing-Tokens y SponsorAccounts</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens01.html"><strong aria-hidden="true">9.2.</strong> Combi-Tokens y Sustain-Collections</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens02.html"><strong aria-hidden="true">9.3.</strong> Licenciamiento de las Sustain-Collection</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens03.html"><strong aria-hidden="true">9.4.</strong> Recompensas por Sustain-Badge</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens04.html"><strong aria-hidden="true">9.5.</strong> Gobernanza basada en CombiSets</a></li><li class="chapter-item expanded "><a href="../fortunarings/fortunarings.html"><strong aria-hidden="true">9.6.</strong> Anillos de la Fortuna</a></li></ol></li><li class="chapter-item expanded "><a href="../glossary/glossary_tokens.html"><strong aria-hidden="true">10.</strong> Glosario de Tokens</a></li><li class="chapter-item expanded "><a href="../glossary/glossary_terms.html"><strong aria-hidden="true">11.</strong> Glosario de Términos</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="tribunales-de-arbitraje"><a class="header" href="#tribunales-de-arbitraje">Tribunales de Arbitraje</a></h1>
+<p>El Tribunal de Arbitraje actúa como un mecanismo de control y resolución de conflictos dentro de la plataforma FREEDERATION. Facilita un canal de denuncias a través del cual los miembros de la comunidad pueden presentar acusaciones detalladas sobre negligencia en proyectos Open Source en las Regen-Star o acciones inapropiadas por parte de las Meta-Islas.</p>
+<h2 id="mecanismo-de-denuncias"><a class="header" href="#mecanismo-de-denuncias">Mecanismo de Denuncias</a></h2>
+<h3 id="publicación-de-denuncias"><a class="header" href="#publicación-de-denuncias">Publicación de Denuncias</a></h3>
+<p>Los miembros de las comunidades dentro de FREEDERATION tienen la facultad de publicar denuncias detalladas sobre actos de negligencia de los administradores de los proyectos en las Regen-Star, o sobre acciones inapropiadas de moderación por parte de las Meta-Islas.</p>
+<p>Estas denuncias se publican como hilos de discusión en la plataforma Nostr, estableciendo así un canal formal para radicar y legitimar las acusaciones en el <strong>Banco de Acusaciones</strong> del <strong>Tribunal de Arbitraje</strong>.</p>
+<h3 id="radicación-y-legitimación-de-denuncias"><a class="header" href="#radicación-y-legitimación-de-denuncias">Radicación y Legitimación de Denuncias</a></h3>
+<p>Una vez publicada una denuncia en Nostr, los operadores de las Meta-Islas o los Sponsors verificados (utilizando su token SponsorAccount) radican la denuncia en el Banco de Acusaciones del Tribunal de Arbitraje. Al hacerlo, obtienen un token numérico que representa la denuncia interpuesta.</p>
+<p>Una denuncia contiene los siguientes atributos:</p>
+<div class="table-wrapper"><table><thead><tr><th><strong>Atributo</strong></th><th><strong>Descripción</strong></th></tr></thead><tbody>
+<tr><td><strong>ACCUSED_ID</strong></td><td>El ID de la entidad acusada (Regen-Star o Meta-Isla).</td></tr>
+<tr><td><strong>CASE_TYPE</strong></td><td>Un valor enumerado de los tipos de casos que se gestionan en Nostr.</td></tr>
+<tr><td><strong>ACCUSATION-POST</strong></td><td>El ID de la publicación Nostr JSON con detalles del caso.</td></tr>
+<tr><td><strong>RETRIBUTION</strong></td><td>Retribución económica que se paga como indemnización a la parte afectada.</td></tr>
+<tr><td><strong>PRESTIGE-DAMAGE</strong></td><td>Cantidad de puntos que se descuentan del Prestigio de la Regen-Star.</td></tr>
+<tr><td><strong>INDEMNIFIED_PARTY</strong></td><td>Dirección de wallet donde se pagará a la parte indemnizada. Por defecto 0.</td></tr>
+</tbody></table>
+</div>
+<p>Durante este proceso, se especifica el tipo de falta según las categorizaciones disponibles, y las sanciones varían dependiendo del tipo de falta y la entidad responsable (Regen-Star o Meta-Isla).
+A continuación se describen los tipos de denuncias correspondientes al atributo <strong>CASE_TYPE</strong> ,  enumerados por identificador:</p>
+<div class="table-wrapper"><table><thead><tr><th><strong>Item</strong></th><th><strong>Descripción</strong></th></tr></thead><tbody>
+<tr><td><strong>FAKE_PROJECT</strong></td><td>La acusación recae sobre la Regen-Star por representar un proyecto o causa que no existe o no representa el valor comunitario anunciado.</td></tr>
+<tr><td><strong>MISREPRESENTATION</strong></td><td>La acusación recae sobre la Regen-Star por suplantación de un proyecto Open Source existente y recaudar fondos sin retribuir a los autores originales.</td></tr>
+<tr><td><strong>IP_PROJECT_INFRIGEMENT</strong></td><td>La acusación recae sobre la Regen-Star por el uso indebido de creaciones intelectuales sin el permiso de los autores.</td></tr>
+<tr><td><strong>EMBEZZLEMENT</strong></td><td>La acusación recae sobre la Regen-Star por malversación de fondos del proyecto Open Source.</td></tr>
+<tr><td><strong>NFT_PLAGIARISM</strong></td><td>La acusación recae sobre la Regen-Star al publicar una colección de NFTs sin licencia de uso o plagio artístico.</td></tr>
+<tr><td><strong>DEV_NEGLIGENCE</strong></td><td>La acusación recae sobre la Regen-Star por mala gestión e incumplimiento en las tareas de desarrollo.</td></tr>
+<tr><td><strong>PROJECT_SECURITY_HAZZARD</strong></td><td>La acusación recae sobre la Regen-Star por propagar software defectuoso que acarrea riesgos de ciberseguridad.</td></tr>
+<tr><td><strong>HARMFUL_PROJECT</strong></td><td>La acusación recae sobre la Regen-Star por propagar contenido digital dañino para la comunidad.</td></tr>
+<tr><td><strong>BAD_COMMUNITY_MANAGEMENT</strong></td><td>La acusación recae sobre la Regen-Star por mala gestión de comunidades o falta de moderación.</td></tr>
+<tr><td><strong>BAD_GOVERANNCE</strong></td><td>La acusación recae sobre la Regen-Star por corrupción en su gobernanza o toma de poder sin equilibrio participativo.</td></tr>
+<tr><td><strong>HARMFUL_ISLAND</strong></td><td>Acusación recae sobre la Meta-Isla por propagar contenido dañino o spam.</td></tr>
+<tr><td><strong>MISGUIDED_CURATION</strong></td><td>Acusación recae sobre la Meta-Isla por asignar mal las categorizaciones de búsqueda.</td></tr>
+<tr><td><strong>IP_ISLAND_INFRIGEMENT</strong></td><td>Acusación recae sobre la Meta-Isla por el uso indebido de creaciones intelectuales sin el permiso de los autores.</td></tr>
+<tr><td><strong>SPONSORSHIP_FRAUD</strong></td><td>Acusación recae sobre la Meta-Isla por promover contenido fraudulento de sponsors.</td></tr>
+<tr><td><strong>ISLAND_COMPLIANCE_FAILURE</strong></td><td>Acusación recae sobre la Meta-Isla por fallar a sus compromisos (Inactivo, usado en el futuro).</td></tr>
+</tbody></table>
+</div>
+<h2 id="sanciones-y-penalizaciones"><a class="header" href="#sanciones-y-penalizaciones">Sanciones y Penalizaciones</a></h2>
+<h3 id="sanciones-para-las-meta-islas"><a class="header" href="#sanciones-para-las-meta-islas">Sanciones para las Meta-Islas</a></h3>
+<ol>
+<li>
+<p><strong>Confiscación y Clausura del Token</strong>: La sanción para una Meta-Isla incluye la confiscación y clausura de su token, así como la confiscación de sus comisiones no reclamadas durante el <strong>VestingPeriod</strong> presente.</p>
+</li>
+<li>
+<p><strong>Penalización al Regen-Planet Asociado</strong>: Cuando una Meta-Isla es sancionada, también se penaliza al Regen-Planet asociado. Se retira la titularidad de la participación accionaria de sus dueños y su derecho a gestionar el activo. Las comisiones se confiscan y el Regen-Planet pasa a ser administrado tutelarmente por su Regen-Star. Todas las comisiones recaudadas por el Regen-Planet sancionado se destinan al <strong>Fondo de Cobertura de Riesgos</strong> de la Regen-Star.</p>
+</li>
+<li>
+<p><strong>Sanción Económica</strong>: La sanción económica se paga del <strong>Fondo de Cobertura de Riesgos</strong> de la Regen-Star. Si no se puede pagar la sanción en su totalidad, se considera una falta de toda la organización representada por la Regen-Star, degradando su prestigio y limitando sus derechos y actividad económica. Esto implica cambiar su status a GUILTY.</p>
+</li>
+</ol>
+<h3 id="sanciones-para-las-regen-star"><a class="header" href="#sanciones-para-las-regen-star">Sanciones para las Regen-Star</a></h3>
+<ol>
+<li>
+<p><strong>Extrema Gravedad</strong>: Las sanciones a una Regen-Star son de extrema gravedad, usualmente relacionadas con casos de corrupción en su gobernanza o mala gestión del proyecto Open Source. La penalización afecta a toda la organización de miembros asociados.</p>
+</li>
+<li>
+<p><strong>Limitación de Actividad Económica</strong>: Se limita la actividad económica de toda la organización de la Regen-Star y se neutraliza su capacidad de respaldar compromisos.</p>
+</li>
+<li>
+<p><strong>Degradación de Status</strong>: La sanción degrada el status de la Regen-Star a GUILTY, resultando en la pérdida de puntaje de prestigio. También implica una sanción económica que debe ser pagada del Fondo de Cobertura de Riesgos de la Regen-Star.</p>
+</li>
+<li>
+<p><strong>Absolución</strong>: Para que una Regen-Star pueda ser absuelta en el futuro, debe cancelar el total de la deuda de las sanciones económicas del Fondo de Cobertura de Riesgos y pagar una cuota extraordinaria correspondiente a la <strong>Tarifa de Absolución</strong>.</p>
+</li>
+</ol>
+<p>Cabe aclarar que una Regen-Star afectada por las faltas de sus Meta-Islas no habría de perder necesariamente su status de Acreditada a Culpable (GUILTY), mientras tenga capacidad de pagar las indemnizaciones del Fondo de Cobertura de Riesgos.
+Pero en caso de no lograr cumplir su sanción, pasa al status de GUILTY y permanecerá en ese estado hasta que logre ser absuelta en una votación de la <strong>Lotería de Promoción</strong>.
+Por otro lado, las acusaciones contra la propia Regen-Star implican una falta institucional grave que puede quitar la legitimidad a todo el proyecto. Además de la sanción económica, pierde su acreditación y su status pasa a GUILTIY instantáneamente.</p>
+<h2 id="absoluciones"><a class="header" href="#absoluciones">Absoluciones</a></h2>
+<p>Cuando una Regen-Star es degradada al estatus GUILTY, se neutraliza su capacidad de producir Meta-Islas o Regen-Planets. Sus miembros asociados pierden el derecho a participar en certámenes de votación y en la Lotería de Promoción, y tampoco pueden operar actividades comerciales en nombre de la organización.</p>
+<p>Además, se descuenta un grado de Prestigio por cada VestingPeriod que transcurra desde su sanción. Durante este estado, las Regen-Planets pueden solicitar un juicio de absolución en la Lotería de Promoción, pagando la correspondiente Tarifa de Abolución cada VestingPeriod para participar como Regen-Star elegible. Cabe destacar que es un requisito cancelar la totalidad de las indemnizaciones adeudadas para poder acceder a este beneficio.</p>
+<p>Si la Regen-Star obtiene la absolución, reinicia su evolución con el estatus de "redimida" (REDEEMED) y pierde todo derecho a respaldar a otras Regen-Star en estado de incubación, lo que significa que su <strong>SponsorshipBonus</strong> se fija en <code>0</code>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../governance/governance.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../economy/economy02.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../governance/governance.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../economy/economy02.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

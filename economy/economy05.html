@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html lang="es" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>VestingPeriods y Retención de Comisiones</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../intro.html"><strong aria-hidden="true">1.</strong> Qué es FREEDERATION?</a></li><li class="chapter-item expanded "><a href="../motivation/motivation.html"><strong aria-hidden="true">2.</strong> Motivación</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../motivation/motivation01.html"><strong aria-hidden="true">2.1.</strong> Desafíos del Marketing Digital</a></li><li class="chapter-item expanded "><a href="../motivation/motivation02.html"><strong aria-hidden="true">2.2.</strong> Sostenibilidad de la Infraestructura Web3</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../motivation/motivation021.html"><strong aria-hidden="true">2.2.1.</strong> Ciberseguridad y Descargo de Responsabilidades del Open Source</a></li><li class="chapter-item expanded "><a href="../motivation/motivation022.html"><strong aria-hidden="true">2.2.2.</strong> Colaboración y Mercado de Seguros Cibernéticos</a></li></ol></li><li class="chapter-item expanded "><a href="../motivation/motivation03.html"><strong aria-hidden="true">2.3.</strong> Incentivos para apoyar el Open Source</a></li><li class="chapter-item expanded "><a href="../motivation/motivation04.html"><strong aria-hidden="true">2.4.</strong> Retos en la Moderación de Contenidos</a></li></ol></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal.html"><strong aria-hidden="true">3.</strong> Propuesta de Valor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../valueproposal/valueproposal01.html"><strong aria-hidden="true">3.1.</strong> Reputación como Valor Intrínseco</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal02.html"><strong aria-hidden="true">3.2.</strong> Organización de la Franquicia</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal03.html"><strong aria-hidden="true">3.3.</strong> Curación de Contenido y Marketing Responsable</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal04.html"><strong aria-hidden="true">3.4.</strong> Valor Agregado para los Sponsors</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal05.html"><strong aria-hidden="true">3.5.</strong> Fuentes de Recaudo</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal06.html"><strong aria-hidden="true">3.6.</strong> Respaldo de Compromisos</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal07.html"><strong aria-hidden="true">3.7.</strong> NFTs con Utilidad</a></li></ol></li><li class="chapter-item expanded "><a href="../futuredev/futuredev.html"><strong aria-hidden="true">4.</strong> Desarrollo a Futuro</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../futuredev/futuredev01.html"><strong aria-hidden="true">4.1.</strong> Desafíos y Soluciones</a></li><li class="chapter-item expanded "><a href="../futuredev/futuredev02.html"><strong aria-hidden="true">4.2.</strong> Futuras Aplicaciones</a></li><li class="chapter-item expanded "><a href="../futuredev/futuredev03.html"><strong aria-hidden="true">4.3.</strong> Hoja de Ruta (ROADMAP)</a></li></ol></li><li class="chapter-item expanded "><a href="../architect/architect.html"><strong aria-hidden="true">5.</strong> Arquitectura</a></li><li class="chapter-item expanded "><a href="../franchise/franchise.html"><strong aria-hidden="true">6.</strong> Franquicia de Responsabilidad Mutua</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../franchise/regen_star.html"><strong aria-hidden="true">6.1.</strong> Regen-Star</a></li><li class="chapter-item expanded "><a href="../franchise/meta_island.html"><strong aria-hidden="true">6.2.</strong> Meta-Islands</a></li><li class="chapter-item expanded "><a href="../franchise/regen_planet.html"><strong aria-hidden="true">6.3.</strong> Regen-Planet</a></li></ol></li><li class="chapter-item expanded "><a href="../economy/economy.html"><strong aria-hidden="true">7.</strong> Economía</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../economy/economy01.html"><strong aria-hidden="true">7.1.</strong> Recaudo de Fondos en la Regen-Star</a></li><li class="chapter-item expanded "><a href="../economy/economy02.html"><strong aria-hidden="true">7.2.</strong> Manejo Presupuestal de Bienes Públicos</a></li><li class="chapter-item expanded "><a href="../economy/economy03.html"><strong aria-hidden="true">7.3.</strong> SponsorShots: Patrocinio y Catalogación</a></li><li class="chapter-item expanded "><a href="../economy/economy04.html"><strong aria-hidden="true">7.4.</strong> Fondo de Gobernanza de FREEDERATION</a></li><li class="chapter-item expanded "><a href="../economy/economy05.html" class="active"><strong aria-hidden="true">7.5.</strong> VestingPeriods y Retención de Comisiones</a></li></ol></li><li class="chapter-item expanded "><a href="../governance/governance.html"><strong aria-hidden="true">8.</strong> Governanza</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../governance/governance01.html"><strong aria-hidden="true">8.1.</strong> Tribunales de Arbitraje</a></li><li class="chapter-item expanded "><a href="../economy/economy02.html"><strong aria-hidden="true">8.2.</strong> Manejo Presupuestal de Bienes Públicos</a></li><li class="chapter-item expanded "><a href="../economy/economy03.html"><strong aria-hidden="true">8.3.</strong> Aspectos a Mejorar: Votación y Privacidad</a></li></ol></li><li class="chapter-item expanded "><a href="../nftplatform/nftplatform.html"><strong aria-hidden="true">9.</strong> Tokens de Participación Comunitaria</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../nftplatform/listingtokens.html"><strong aria-hidden="true">9.1.</strong> Listing-Tokens y SponsorAccounts</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens01.html"><strong aria-hidden="true">9.2.</strong> Combi-Tokens y Sustain-Collections</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens02.html"><strong aria-hidden="true">9.3.</strong> Licenciamiento de las Sustain-Collection</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens03.html"><strong aria-hidden="true">9.4.</strong> Recompensas por Sustain-Badge</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens04.html"><strong aria-hidden="true">9.5.</strong> Gobernanza basada en CombiSets</a></li><li class="chapter-item expanded "><a href="../fortunarings/fortunarings.html"><strong aria-hidden="true">9.6.</strong> Anillos de la Fortuna</a></li></ol></li><li class="chapter-item expanded "><a href="../glossary/glossary_tokens.html"><strong aria-hidden="true">10.</strong> Glosario de Tokens</a></li><li class="chapter-item expanded "><a href="../glossary/glossary_terms.html"><strong aria-hidden="true">11.</strong> Glosario de Términos</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="vestingperiods-y-retención-de-comisiones"><a class="header" href="#vestingperiods-y-retención-de-comisiones">VestingPeriods y Retención de Comisiones</a></h1>
+<p>El VestingPeriod es un lapso de tiempo predefinido durante el cual se contabilizan las actividades de recaudo de las Regen-Star, y las comisiones generadas por estas actividades se retienen. Por defecto, este periodo es de 7 días. El objetivo principal del VestingPeriod es proporcionar un marco temporal en el que se puedan realizar varias acciones administrativas y de control que son esenciales para el funcionamiento del ecosistema de FREEDERATION.</p>
+<h3 id="actividades-durante-el-vestingperiod"><a class="header" href="#actividades-durante-el-vestingperiod">Actividades Durante el VestingPeriod</a></h3>
+<ol>
+<li>
+<p><strong>Recaudo y Retención de Comisiones</strong>: Durante el VestingPeriod, todas las comisiones generadas por las actividades de las Regen-Star se contabilizan y retienen. Esto asegura un control adecuado sobre los ingresos y permite una evaluación precisa de los resultados financieros al final de cada periodo.</p>
+</li>
+<li>
+<p><strong>Proceso Global y Sorteo Aleatorio</strong>: Al final de cada VestingPeriod, FREEDERATION ejecuta un proceso global que incluye un sorteo aleatorio, la <strong>Lotería de Promoción</strong>. Este sorteo tiene dos propósitos principales:</p>
+<ul>
+<li><strong>Resolver Disputas</strong>: Cualquier disputa pendiente puede ser resuelta de manera imparcial mediante el sorteo en los <strong>Tribunales de Arbitraje</strong>.</li>
+<li><strong>Promoción de Nuevos Proyectos</strong>: Se pueden seleccionar nuevos proyectos para ser acreditados y recibir financiamiento, fomentando la innovación y el crecimiento dentro de la plataforma.</li>
+</ul>
+</li>
+<li>
+<p><strong>Consolidación de Balances y Distribución de Fondos</strong>: En el mismo evento global, las Regen-Star pueden consolidar sus balances financieros y distribuir los presupuestos. Los fondos recaudados en el <strong>Fondo de Desarrollo</strong> se asignan a las tareas y proyectos específicos que necesitan financiamiento, asegurando una gestión eficiente y transparente de los recursos.</p>
+</li>
+<li>
+<p><strong>Auto-Promoción del Prestigio de la Regen-Star</strong>: Las Regen-Star acreditadas pueden aumentar su <strong>Prestigio</strong> pagando una <strong>Cuota de Promoción</strong> al final del VestingPeriod, lo cual indirectamente aumenta la Reputación de sus Meta-Islas asociadas.</p>
+</li>
+</ol>
+<h3 id="aumento-de-prestigio-y-pago-de-cuota-de-promoción"><a class="header" href="#aumento-de-prestigio-y-pago-de-cuota-de-promoción">Aumento de Prestigio y Pago de Cuota de Promoción</a></h3>
+<p>Al final del <strong>VestingPeriod</strong>, las **Regen-Star ** tienen la oportunidad de aumentar su Prestigio pagando una <strong>Cuota de Promoción</strong> al Fondo de Gobernanza de FREEDERATION. Esta cuota corresponde al impuesto sobre los ingresos generados por la Regen-Star a través de la venta de Meta-Islas y <strong>SponsorShots</strong>.</p>
+<p>Para acreditar la cuota de promoción y aumentar su <strong>Prestigio</strong>, las <strong>Regen-Star</strong> deben contribuir con un monto mínimo de impuesto al Fondo de Gobernanza de FREEDERATION.</p>
+<p>El aumento de Prestigio es un requisito clave para desbloquear los pagos en cada VestingPeriod. Esto asegura que las Regen-Star mantengan un comportamiento alineado con los objetivos y normas de la plataforma, promoviendo un ecosistema robusto y confiable.</p>
+<h3 id="desbloqueo-y-retiro-de-comisiones"><a class="header" href="#desbloqueo-y-retiro-de-comisiones">Desbloqueo y Retiro de Comisiones</a></h3>
+<p>A través del proceso de aumento de <strong>Prestigio</strong> de cada <strong>Regen-Star</strong> se otorga a sus agencias asociadas, las <strong>Meta-Islas</strong> y <strong>Regen-Planets</strong>, el permiso para desbloquear y retirar las comisiones acumuladas.</p>
+<p>Una vez desbloqueados, tales fondos pueden ser transferidos fuera de la DAO de FREEDERATION a las cuentas particulares de los agentes aseguradores que operan estas entidades.</p>
+<p>Esto asegura que las Regen-Star y sus agentes asociados mantengan un comportamiento alineado con los objetivos y normas de la plataforma, promoviendo un ecosistema robusto y confiable.</p>
+<h3 id="control-contractual-y-cumplimiento"><a class="header" href="#control-contractual-y-cumplimiento">Control Contractual y Cumplimiento</a></h3>
+<p>Una característica esencial del <strong>VestingPeriod</strong> es el control contractual que se impone sobre los agentes aseguradores. Estos agentes no pueden retirar sus comisiones instantáneamente por cada venta. La razón detrás de esta restricción es doble:</p>
+<ul>
+<li><strong>Mantenimiento del Control</strong>: Mantener un control efectivo sobre el comportamiento de los agentes aseguradores y asegurar que cumplan con sus compromisos.</li>
+<li><strong>Evaluación de Compromisos</strong>: Durante el VestingPeriod, se evalúa el desempeño de los agentes. En caso de incumplimientos o faltas, los agentes pueden ser obligados a entregar las comisiones del VestingPeriod actual y cualquier fondo residual que esté en su agencia (<strong>Meta-Isla</strong>).</li>
+</ul>
+<p>Las comisiones confiscadas debido a incumplimientos se destinan al Fondo de Cobertura de Riesgos para futuras indemnizaciones. De esa manera se provee un respaldo financiero para la Regen-Star, permitiendo que cumpla con sus compromisos sin comprometer su <strong>Prestigio</strong> y reputación dentro de la plataforma.</p>
+<h2 id="conclusiones"><a class="header" href="#conclusiones">Conclusiones</a></h2>
+<p>El VestingPeriod es un elemento fundamental en el ecosistema de FREEDERATION, proporcionando un marco estructurado para la gestión financiera, la resolución de disputas y el cumplimiento de compromisos.</p>
+<p>Al implementar este periodo de retención y evaluación, junto con el mecanismo de aumento de <strong>Prestigio</strong> mediante el pago de una <strong>Cuota de Promoción</strong>, FREEDERATION asegura una operatividad transparente y eficiente. Esto promueve la confianza y la integridad entre todos los participantes del sistema, asegurando el crecimiento sostenible y la estabilidad del ecosistema.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../economy/economy04.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../governance/governance.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../economy/economy04.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../governance/governance.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
