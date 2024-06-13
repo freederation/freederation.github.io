@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html lang="es" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Manejo Presupuestal de Bienes Públicos</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../intro.html"><strong aria-hidden="true">1.</strong> Qué es FREEDERATION?</a></li><li class="chapter-item expanded "><a href="../motivation/motivation.html"><strong aria-hidden="true">2.</strong> Motivación</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../motivation/motivation01.html"><strong aria-hidden="true">2.1.</strong> Desafíos del Marketing Digital</a></li><li class="chapter-item expanded "><a href="../motivation/motivation02.html"><strong aria-hidden="true">2.2.</strong> Sostenibilidad de la Infraestructura Web3</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../motivation/motivation021.html"><strong aria-hidden="true">2.2.1.</strong> Ciberseguridad y Descargo de Responsabilidades del Open Source</a></li><li class="chapter-item expanded "><a href="../motivation/motivation022.html"><strong aria-hidden="true">2.2.2.</strong> Colaboración y Mercado de Seguros Cibernéticos</a></li></ol></li><li class="chapter-item expanded "><a href="../motivation/motivation03.html"><strong aria-hidden="true">2.3.</strong> Incentivos para apoyar el Open Source</a></li><li class="chapter-item expanded "><a href="../motivation/motivation04.html"><strong aria-hidden="true">2.4.</strong> Retos en la Moderación de Contenidos</a></li></ol></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal.html"><strong aria-hidden="true">3.</strong> Propuesta de Valor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../valueproposal/valueproposal01.html"><strong aria-hidden="true">3.1.</strong> Reputación como Valor Intrínseco</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal02.html"><strong aria-hidden="true">3.2.</strong> Organización de la Franquicia</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal03.html"><strong aria-hidden="true">3.3.</strong> Curación de Contenido y Marketing Responsable</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal04.html"><strong aria-hidden="true">3.4.</strong> Valor Agregado para los Sponsors</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal05.html"><strong aria-hidden="true">3.5.</strong> Fuentes de Recaudo</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal06.html"><strong aria-hidden="true">3.6.</strong> Respaldo de Compromisos</a></li><li class="chapter-item expanded "><a href="../valueproposal/valueproposal07.html"><strong aria-hidden="true">3.7.</strong> NFTs con Utilidad</a></li></ol></li><li class="chapter-item expanded "><a href="../futuredev/futuredev.html"><strong aria-hidden="true">4.</strong> Desarrollo a Futuro</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../futuredev/futuredev01.html"><strong aria-hidden="true">4.1.</strong> Desafíos y Soluciones</a></li><li class="chapter-item expanded "><a href="../futuredev/futuredev02.html"><strong aria-hidden="true">4.2.</strong> Futuras Aplicaciones</a></li><li class="chapter-item expanded "><a href="../futuredev/futuredev03.html"><strong aria-hidden="true">4.3.</strong> Hoja de Ruta (ROADMAP)</a></li></ol></li><li class="chapter-item expanded "><a href="../architect/architect.html"><strong aria-hidden="true">5.</strong> Arquitectura</a></li><li class="chapter-item expanded "><a href="../franchise/franchise.html"><strong aria-hidden="true">6.</strong> Franquicia de Responsabilidad Mutua</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../franchise/regen_star.html"><strong aria-hidden="true">6.1.</strong> Regen-Star</a></li><li class="chapter-item expanded "><a href="../franchise/meta_island.html"><strong aria-hidden="true">6.2.</strong> Meta-Islands</a></li><li class="chapter-item expanded "><a href="../franchise/regen_planet.html"><strong aria-hidden="true">6.3.</strong> Regen-Planet</a></li></ol></li><li class="chapter-item expanded "><a href="../economy/economy.html"><strong aria-hidden="true">7.</strong> Economía</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../economy/economy01.html"><strong aria-hidden="true">7.1.</strong> Recaudo de Fondos en la Regen-Star</a></li><li class="chapter-item expanded "><a href="../economy/economy02.html"><strong aria-hidden="true">7.2.</strong> Manejo Presupuestal de Bienes Públicos</a></li><li class="chapter-item expanded "><a href="../economy/economy03.html"><strong aria-hidden="true">7.3.</strong> SponsorShots: Patrocinio y Catalogación</a></li><li class="chapter-item expanded "><a href="../economy/economy04.html"><strong aria-hidden="true">7.4.</strong> Fondo de Gobernanza de FREEDERATION</a></li><li class="chapter-item expanded "><a href="../economy/economy05.html"><strong aria-hidden="true">7.5.</strong> VestingPeriods y Retención de Comisiones</a></li></ol></li><li class="chapter-item expanded "><a href="../governance/governance.html"><strong aria-hidden="true">8.</strong> Governanza</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../governance/governance01.html"><strong aria-hidden="true">8.1.</strong> Tribunales de Arbitraje</a></li><li class="chapter-item expanded "><a href="../governance/governance02.html" class="active"><strong aria-hidden="true">8.2.</strong> Manejo Presupuestal de Bienes Públicos</a></li><li class="chapter-item expanded "><a href="../governance/governance03_future.html"><strong aria-hidden="true">8.3.</strong> Aspectos a Mejorar: Votación y Privacidad</a></li></ol></li><li class="chapter-item expanded "><a href="../nftplatform/nftplatform.html"><strong aria-hidden="true">9.</strong> Tokens de Participación Comunitaria</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../nftplatform/listingtokens.html"><strong aria-hidden="true">9.1.</strong> Listing-Tokens y SponsorAccounts</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens01.html"><strong aria-hidden="true">9.2.</strong> Combi-Tokens y Sustain-Collections</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens02.html"><strong aria-hidden="true">9.3.</strong> Licenciamiento de las Sustain-Collection</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens03.html"><strong aria-hidden="true">9.4.</strong> Recompensas por Sustain-Badge</a></li><li class="chapter-item expanded "><a href="../nftplatform/combitokens04.html"><strong aria-hidden="true">9.5.</strong> Gobernanza basada en CombiSets</a></li><li class="chapter-item expanded "><a href="../fortunarings/fortunarings.html"><strong aria-hidden="true">9.6.</strong> Anillos de la Fortuna</a></li></ol></li><li class="chapter-item expanded "><a href="../glossary/glossary_tokens.html"><strong aria-hidden="true">10.</strong> Glosario de Tokens</a></li><li class="chapter-item expanded "><a href="../glossary/glossary_terms.html"><strong aria-hidden="true">11.</strong> Glosario de Términos</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="lotería-de-promoción"><a class="header" href="#lotería-de-promoción">Lotería de Promoción</a></h1>
+<p>FREEDERATION introduce un innovador mecanismo para resolver disputas y promover nuevos proyectos Open Source dentro del ecosistema de franquicias Regen-Star. Este mecanismo se basa en una <strong>Lotería de Promoción</strong>, un sistema de votación y sorteo aleatorio que tiene como objetivo incentivar la participación activa de los miembros de la comunidad y apoyar el desarrollo de proyectos de alto impacto.</p>
+<h2 id="la-lotería-de-promoción-el-corazón-del-mecanismo"><a class="header" href="#la-lotería-de-promoción-el-corazón-del-mecanismo">La Lotería de Promoción: El Corazón del Mecanismo</a></h2>
+<p>En el núcleo del sistema de FREEDERATION se encuentra la <strong>Lotería de Promoción</strong>, un sorteo aleatorio diseñado para impulsar la participación y promoción de proyectos. Este proceso se desarrolla de la siguiente manera:</p>
+<ol>
+<li><strong>Propuestas Selladas</strong>: Los operadores de las <strong>Meta-Islas</strong> envían sus propuestas selladas <strong>Sealed-Proposal</strong> a un Banco de Veredictos. Estas propuestas contienen veredictos sobre casos abiertos en el Tribunal de Arbitraje, así como recomendaciones para la promoción de proyectos Regen-Star en incubación y la absolución de aquellos que hayan sido sancionados (GUILTY).
+Una propuesta sellada <strong>Sealed-Proposal</strong> corresponde al Hash Keccak-256 de un bloque de atributos, 5 enteros consecutivos de 32 byes, que contiene la siguiente información:</li>
+</ol>
+<div class="table-wrapper"><table><thead><tr><th><strong>Proposal Entry</strong></th><th></th></tr></thead><tbody>
+<tr><td><strong>ARBITRATION_TRIAL</strong></td><td>ID del Caso de denuncia sobre el cuál se determina un veredicto. Si no se especifica alguno, se asigna "0".</td></tr>
+<tr><td><strong>VEREDICT</strong></td><td>Un valor entero de 32 bytes que indica el veredicto sobre el caso de denuncia (ARBITRATION_TRIAL). Se usa un múltiplo de 7 para indicar una respuesta afirmativa y declarar el veredicto como Culpable; en caso contrario, se interpreta como negativa y se declara la Inocencia.</td></tr>
+<tr><td><strong>STAR_PROMOTION</strong></td><td>ID de la Regen-Star en estado de incubación pero que busca promoción. Si no se especifica alguno, se asigna "0".</td></tr>
+<tr><td><strong>STAR_REDEMPTION</strong></td><td>ID de la Regen-Star GUILTY que puede ser perdonada. Si no se especifica alguno, se asigna "0".</td></tr>
+</tbody></table>
+</div>
+<blockquote>
+<p>Esta propuesta sellada corresponde al hash Keccak-256 firmado criptográficamente con la tupla de claves Pública/Privada bajo el esquema Edwards ECDA 256619 del grupo Risetto. Se obtiene un bloque de 64 bytes que corresponde a la tupla (R,s) del punto evaluado en la curva Edwards.</p>
+</blockquote>
+<ol start="2">
+<li><strong>Generación de Número Aleatorio</strong>: Cada VestingPeriod, la DAO de FREEDERATION genera un número aleatorio on-chain que es no predecible pero verificable. Este número se utiliza para seleccionar una propuesta sellada al azar del Banco de Veredictos.</li>
+</ol>
+<blockquote>
+<p>En la plataforma de Internet Computer Protocol, la obtención de números aleatorios se realiza utilizando los servicios de <strong>On-Chain Randomness</strong> a través del <strong>ICP management canister</strong>.</p>
+</blockquote>
+<ol start="3">
+<li><strong>Selección del Ganador</strong>: El autor de la propuesta sellada elegida al azar es declarado ganador de la Lotería de Promoción. Sin embargo, para reclamar su premio, debe revelar los parámetros originales de la propuesta sellada criptográficamente.</li>
+</ol>
+<blockquote>
+<p>Es decir, debe publicarse la tupla de 5 enteros correspondientes al <strong>Proposal Entry</strong>. La tupla será evaluada por el contrato inteligente comparando el <strong>committment</strong> de la firma criptográfica previamente registrada, referenciando la misma llave pública del autor de la propuesta.</p>
+</blockquote>
+<h3 id="anulación-de-jugadas"><a class="header" href="#anulación-de-jugadas">Anulación de Jugadas</a></h3>
+<p>Si no coinciden la revelación y la firma criptográfica, se anula la jugada y se cancela la entrega del premio:</p>
+<ul>
+<li>Una inconsistencia en firma criptográfica implica también una sanción en reputación a la Meta-Isla responsable, reduciendo su cuenta de de <strong>SponsorShots</strong> y el bloqueo al sistema de votación.</li>
+<li>Si la jugada es inválida por otras razones (acusación no vigente, propuestas inválidas), se anula la jugada sin sanción alguna.</li>
+</ul>
+<p>En ambos casos, el premio de la <strong>Lotería de Promoción</strong>  se acumula para el siguiente <strong>VestingPeriod</strong>.</p>
+<h2 id="participación-y-beneficios"><a class="header" href="#participación-y-beneficios">Participación y Beneficios</a></h2>
+<p>Para participar en la Lotería de Promoción, los operadores de Meta-Islas deben adquirir un ticket pagando una tarifa. Este sistema está restringido a un ticket por Meta-Isla por cada VestingPeriod, asegurando una distribución justa de oportunidades. Las tarifas recaudadas contribuyen al <strong>Fondo de Gobernanza de FREEDERATION</strong>, que se utiliza para financiar las operaciones de la plataforma y los premios de la lotería.</p>
+<h3 id="contribuciones-y-distribución-del-fondo-de-gobernanza"><a class="header" href="#contribuciones-y-distribución-del-fondo-de-gobernanza">Contribuciones y Distribución del Fondo de Gobernanza</a></h3>
+<p>El Fondo de Gobernanza se alimenta de dos fuentes principales:</p>
+<ol>
+<li><strong>Tarifas de Participación</strong>: Los tickets comprados por los operadores de Meta-Islas.</li>
+<li><strong>Indemnizaciones</strong>: Pagadas por las Regen-Star en los Tribunales de Arbitraje.</li>
+</ol>
+<p>Un porcentaje del Fondo de Gobernanza se destina al premio de la Lotería de Promoción, incentivando así la participación activa de los operadores de Meta-Islas y fomentando la resolución de disputas y la promoción de proyectos.</p>
+<h2 id="validez-de-los-veredictos"><a class="header" href="#validez-de-los-veredictos">Validez de los Veredictos</a></h2>
+<p>Para que un veredicto emitido en una propuesta sellada sea aplicable, debe cumplir con ciertos criterios:</p>
+<ol>
+<li><strong>Regen-Star Existentes</strong>: La acusación debe dirigirse a Regen-Stars acreditadas (ACCREDITED, REDEEMED) y que no se encuentren en estado de incubación (NEBULOUS, PROMOTING) o previamente sancionadas como GUILTY.</li>
+<li><strong>Entidad Perjudicada</strong>: Si los miembros de una Regen-Star ya han eliminado la Meta-Isla perjudicada, se invalida el voto relacionado, ya que no existe entidad a la cual acusar.</li>
+<li><strong>Aboluciones y Promociones</strong>: La solicitud de absolución debe referirse a una Regen-Star en estado GUILTY que haya pagado la Tarifa de Abolución. De igual manera, el proyecto en proceso de acreditación debe mantener su estatus PROMOTING.</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../governance/governance01.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../governance/governance03_future.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../governance/governance01.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../governance/governance03_future.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
